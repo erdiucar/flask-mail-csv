@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <div class="mx-auto text-center" style="width: 300px;">
+        <h1 class="mb-3">Form</h1>
+        
+        <form action="/form" method="post" class="form-text">
+            <input type="text" class="form-control mb-3" placeholder="Name" name="name" required>
+            <input type="text" class="form-control mb-3" placeholder="Surname" name="surname" required>
+            <input type="email" class="form-control mb-3" placeholder="E-Mail" name="email" required>
+            <select name="city" class="form-control mb-3" required>
+                <option value="İstanbul" selected>İstanbul</option>
+                <option value="Ankara">Ankara</option>
+                <option value="İzmir">İzmir</option>
+            </select>
+        
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+    
+{% endblock %}

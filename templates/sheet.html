@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Surname</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">City</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for registrant in registrants %}
+
+    <tr>
+      <th scope="row">{{ registrant[0] }}</th>
+      <td>{{ registrant[1] }}</td>
+      <td>{{ registrant[2] }}</td>
+      <td>{{ registrant[3] }}</td>
+      <td>{{ registrant[4] }}</td>
+    </tr>
+    
+    {% endfor %}
+    
+  </tbody>
+</table>
+
+{% endblock %}
